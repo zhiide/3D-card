@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D card</title>
+    <style>
+        .body {
+            font-family: sans-serif;
+        }
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image: url(../3D\ card/img/JA.png);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+            backface-visibility: hidden;
+            border-radius: 50px;
+        }
+
+        .front {
+            background-color: rgb(255, 255, 255);
+            border: 3px solid rgb(0, 0, 0);
+        }
+
+        .back {
+            background-color: #ffffff;
+            transform: rotateY(180deg);
+            border: 3px solid rgb(0, 0, 0);
+        }
+
+        .card:hover .front {
+            transform: rotateY(180deg);
+        }
+
+        .card:hover .back {
+            transform: rotateY(360deg);
+        }
+
+        img {
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="card">
+            <div class="front"><img src="img/Жийдегул Нурбаева.png" alt="Жийдегул Нурбаева"width="290px"></div>
+            <div class="back"><img src="img/active.png" alt="Active Team"width="290px"></div>
+        </div>
+    </div>
+</body>
+
+</html>
